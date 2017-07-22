@@ -103,10 +103,8 @@
 <div class="col-md-12">
 					<div class="webpage">
 					
-							<a href="https://yangguoyu9292.github.io/test/xkw.html" target="_blank"><img  src="image/xkw.png" class="big" alt="" class="big img-responsive"/></a>
-							<a href="http://www.pofeng.com.cn/" target="_blank"><img src="image/pf.png" class="big" alt="" class="big img-responsive"/></a>
-							<a href="http://dealer.bitauto.com/100048025/index.html" target="_blank"><img src="image/znt.png" alt=""  class="big img-responsive"/></a>
-						
+							<a href="https://yangguoyu9292.github.io/test/xkw.html" target="_blank"><img  src="image/xkw.png" id="img" alt="" class="big img-responsive"/></a>
+							
 					</div>
 </div>
 </div>
@@ -183,8 +181,23 @@
 		wrapper.href=this.href;
 }
 }
-
+ var curIndex=0;
+  var arr=new Array();
+arr[0]='image/xkw.png';
+arr[1]='image/pf.png';
+arr[2]='image/znt.png';
+setInterval(changeImg,1000);
+function changeImg(){
+	var obj=document.getElementById('img');
+	if(curIndex==arr.length-1){
+	curIndex=0;
+}else{
+	curIndex+=1;
 }
+obj.src=arr[curIndex];
+}
+}
+
 </script>
  </body>
 </html>
